@@ -1,0 +1,591 @@
+/*====================================
+    google font
+====================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*====================================
+    root
+====================================*/
+[data-theme="light"] {
+    --body-font-color: #acacac;
+    --body-bgcolor: #ffffff;
+    --paragraph-font-color: #acacac;
+    --extra-bgcolor: #f7f7f7;
+}
+[data-theme="dark"] {
+    --body-font-color: #acacac;
+    --body-bgcolor: #000000;
+    --paragraph-font-color: #acacac;
+    --extra-bgcolor: #131313;
+}
+
+:root, [data-theme="dark"] {
+    /* body */
+    --body-font-size: 14px;
+    --body-font-family: "Poppins", sans-serif;
+    --body-font-weight: 400;
+    --body-font-style: normal;
+    --body-font-line-height: normal;
+    --body-font-letter-spacing: normal;
+
+    /* heading */
+    --heading-font-color: #263978;
+    --heading-font-family: "Poppins", sans-serif;
+    --heading-font-weight: 600;
+    --heading-font-style: normal;
+    --heading-font-line-height: normal;
+
+    /* section-heading */
+    --section-heading-font-color: #f1592e;
+    --section-heading-font-family: "Poppins", sans-serif;
+    --section-heading-font-text: none;
+    --section-heading-font-weight: 600;
+    --section-heading-font-style: normal;
+    --section-heading-font-line-height: 1.2;
+
+    /* paragraph */
+    --paragraph-font-family: "Poppins", sans-serif;
+    --paragraph-font-line-height: 25px;
+
+    /* general color */
+    --dominant-font-color: #f1592e;
+    --secondary-font-color: #263978;
+    --extra-font-color-light: #ffffff;
+    --extra-font-color-dark: #333333;
+
+    /* border */
+    --border-color: 128,128,128;
+    --border-opacity: 0.1;
+    --border-radius: 0px;
+    --border-radius2: 0px;
+
+    /* box-shadow */
+    --box-shadow-outer: 0, 0, 0;
+    --box-shadow-outer-opacity: 0.15;
+}
+
+/*====================================
+    color css
+====================================*/
+/* body property css */
+.body-color,
+.body-dominant-color,
+.body-secondary-color {
+    color: var(--body-font-color);
+}
+.body-dominant-color,
+.body-secondary-color {
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.body-dominant-color:hover {
+    color: var(--dominant-font-color);
+}
+.body-secondary-color:hover {
+    color: var(--secondary-font-color);
+}
+.body-bg {
+    background-color: var(--body-bgcolor);
+}
+
+/* heading property css */
+.heading-color {
+    color: var(--heading-font-color);
+}
+.heading-weight {
+    font-weight: var(--heading-font-weight);
+}
+.section-heading-weight {
+    font-weight: var(--section-heading-font-weight);
+}
+
+/* general property css */
+.dominant-color {
+    color: var(--dominant-font-color);
+}
+.dominant-bg {
+    background-color: var(--dominant-font-color);
+}
+.secondary-color {
+    color: var(--secondary-font-color);
+}
+.secondary-bg {
+    background-color: var(--secondary-font-color);
+}
+.extra-color-light {
+    color: var(--extra-font-color-light);
+}
+.extra-bg-light {
+    background-color: var(--extra-font-color-light);
+}
+.extra-bg {
+    background-color: var(--extra-bgcolor);
+}
+.dominant-btn {
+    color: var(--extra-font-color-light);
+    background-color: var(--dominant-font-color);
+    border: 1px solid var(--dominant-font-color);
+}
+.dominant-btn:hover {
+    color: var(--dominant-font-color);
+    background-color: transparent;
+}
+.secondary-btn {
+    color: var(--extra-font-color-light);
+    background-color: var(--secondary-font-color);
+    border: 1px solid var(--secondary-font-color);
+}
+.secondary-btn:hover {
+    color: var(--secondary-font-color);
+    background-color: transparent;
+}
+.dominant-btn,
+.secondary-btn {
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border 0.5s ease-in-out;
+}
+
+/************************************* 'html', 'body', 'h1 to h6' start *************************************/
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        scroll-behavior: auto
+    }
+}
+
+/*=====================================
+    html css
+=====================================*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*====================================
+    body css
+====================================*/
+body {
+    color: var(--body-font-color);
+    font-size: var(--body-font-size);
+    background-color: var(--body-bgcolor);
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-style: var(--body-font-style);
+    line-height: var(--body-font-line-height);
+    letter-spacing: var(--body-font-letter-spacing);
+    word-break: break-word;
+}
+
+/*====================================
+    heading css
+====================================*/
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-font-color);
+    margin: 0;
+    padding: 0;
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    font-style: var(--heading-font-style);
+    line-height: var(--heading-font-line-height);
+}
+/************************************* 'html', 'body', 'h1 to h6' end *************************************/
+
+/************************************* section start *************************************/
+/*====================================
+    section-heading css
+====================================*/
+.section-heading {
+    color: var(--section-heading-font-color);
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: var(--section-heading-font-family);
+    text-transform: var(--section-heading-font-text);
+    font-weight: var(--section-heading-font-weight);
+    font-style: var(--section-heading-font-style);
+    line-height: var(--section-heading-font-line-height);
+}
+
+/*====================================
+    section-sub-heading padding css
+====================================*/
+.section-sub-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/*====================================
+    section padding css
+====================================*/
+.section-ptb {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.section-pt {
+    padding-top: 60px;
+}
+.section-pb {
+    padding-bottom: 60px;
+}
+@media (min-width: 576px) {
+    .section-ptb {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .section-pt {
+        padding-top: 80px;
+    }
+    .section-pb {
+        padding-bottom: 80px;
+    }
+}
+@media (min-width: 1200px) {
+    .section-ptb {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .section-pt {
+        padding-top: 100px;
+    }
+    .section-pb {
+        padding-bottom: 100px;
+    }
+}
+/************************************* section end *************************************/
+
+/************************************* 'p' start *************************************/
+/*====================================
+    paragraph css
+====================================*/
+p {
+    color: var(--paragraph-font-color);
+    margin: 0;
+    font-family: var(--paragraph-font-family);
+    line-height: var(--paragraph-font-line-height);
+}
+/************************************* 'p' end *************************************/
+
+/************************************* 'container', 'container-fluid' start *************************************/
+/*====================================
+    'container' tag css
+====================================*/
+.container {
+    padding: 0px 15px;
+}
+
+/*====================================
+    'container-fluid' tag css
+====================================*/
+.container-fluid {
+    padding: 0px 15px;
+}
+@media (min-width: 1200px) {
+    .container-fluid {
+        padding: 0px 30px;
+    }
+}
+/************************************* 'container', 'container-fluid' end *************************************/
+
+/************************************* 'row', 'col' start *************************************/
+/*====================================
+    row, col css
+====================================*/
+.row {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.row>* {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+.row-mtm {
+    margin-top: -30px;
+}
+.row-mtm>* {
+    margin-top: 30px;
+}
+.row-mtm10 {
+    margin-top: -10px;
+}
+.row-mtm10>* {
+    margin-top: 10px;
+}
+@media (min-width: 576px) {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .row>* {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/************************************* 'row', 'col' end *************************************/
+
+/************************************* 'a' start *************************************/
+/*====================================
+    'a' tag css
+====================================*/
+a {
+    color: var(--heading-font-color);
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    box-shadow: none;
+}
+/************************************* 'a' end *************************************/
+
+/************************************* button start *************************************/
+/*====================================
+    'button' tag css
+====================================*/
+button {
+    display: inline-block;
+    padding: 0px;
+    background: 0 0;
+    font-family: var(--body-font-family);
+    border: none;
+    line-height: var(--body-font-line-height);
+}
+button, button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/*====================================
+    'btn-style' tag css
+====================================*/
+.btn-style {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: var(--border-radius);
+}
+
+/*====================================
+    toggler-wrapper css
+====================================*/
+button.navbar-toggler {
+    display: block;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+button.navbar-toggler:focus {
+    box-shadow: none;
+}
+button.navbar-toggler span.line,
+button.navbar-toggler span.line::before,
+button.navbar-toggler span.line::after {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: var(--heading-font-color);
+    -webkit-transition: background-color 0.5s ease-in-out,top 0.5s ease-in-out,transform 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out,top 0.5s ease-in-out,transform 0.5s ease-in-out;
+}
+button.navbar-toggler span.line {
+    position: relative;
+}
+button.navbar-toggler span.line::before,
+button.navbar-toggler span.line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+button.navbar-toggler span.line::before {
+    top: -7px;
+}
+button.navbar-toggler span.line::after {
+    top: 7px;
+}
+button.navbar-toggler[aria-expanded="true"] span.line {
+    background-color: transparent;
+}
+button.navbar-toggler[aria-expanded="true"] span.line::before,
+button.navbar-toggler[aria-expanded="true"] span.line::after {
+    top: 0;
+}
+button.navbar-toggler[aria-expanded="true"] span.line::before {
+    transform: rotate(45deg);
+}
+button.navbar-toggler[aria-expanded="true"] span.line::after {
+    transform: rotate(-45deg);
+}
+/************************************* button end *************************************/
+
+/************************************* ul start *************************************/
+/*====================================
+    'ul', 'li' tag css
+====================================*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ul-mt30 css */
+.ul-mt30 {
+    margin-top: -15px;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.ul-mt30>* {
+    margin-top: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+@media (min-width: 1200px) {
+    .ul-mt30 {
+        margin-top: -30px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .ul-mt30>* {
+        margin-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/************************************* ul end *************************************/
+
+/************************************* b, strong start *************************************/
+/*===========================================
+    'b', 'strong' tag css
+===========================================*/
+b, strong {
+    color: var(--heading-font-color);
+    font-weight: var(--heading-font-weight);
+}
+/************************************* b, strong end *************************************/
+
+/************************************* back-to-top start *************************************/
+/*====================================
+    back-to-top css
+====================================*/
+a#top {
+    font-size: 20px;
+    bottom: 30px;
+    right: 15px;
+    height: 45px;
+    width: 45px;
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+}
+@media (min-width: 1200px) {
+    a#top {
+        right: 30px;
+        height: 60px;
+        width: 60px;
+    }
+}
+/************************************* back-to-top end *************************************/
+
+/************************************* custom-switch css start *************************************/
+/*====================================
+    custom-switch css
+====================================*/
+label.cust-switch-label {
+    width: 28px;
+    height: 12px;
+    cursor: pointer;
+}
+label.cust-switch-label span.cust-switch-slide {
+    cursor: pointer;
+    border-radius: 25px;
+}
+label.cust-switch-label span.cust-switch-slide::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    transform: translateX(0%);
+    background-color: var(--heading-font-color);
+    border-radius: 100%;
+    line-height: 1;
+    -webkit-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+label.cust-switch-label.theme-switch span.cust-switch-slide::before {
+    content: "\f1bf";
+    font-family: remixicon!important;
+    color: var(--extra-font-color-dark);
+    font-size: 12px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--extra-font-color-light);
+}
+label.cust-switch-label input:checked ~ span.cust-switch-slide::before {
+    transform: translateX(100%);
+}
+label.cust-switch-label.theme-switch input:checked ~ span.cust-switch-slide::before {
+    content: "\ef75";
+    color: var(--extra-font-color-light);
+    background-color: var(--extra-font-color-dark);
+}
+/************************************* custom-switch css start *************************************/
+
+/************************************* counter-num css start *************************************/
+/*====================================
+    counter-area css
+====================================*/
+.counter-area {
+    counter-reset: section;
+}
+.counter-area .counter-num h2.section-heading::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+}
+.counter-area .counter-num .counter-sub-num {
+    counter-reset: subsection;
+}
+.counter-area .counter-num .counter-sub-num h2.section-sub-heading::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+.counter-area .counter-num .counter-sub-num .counter-sup-num {
+    counter-reset: supsection;
+}
+.counter-area .counter-num .counter-sub-num .counter-sup-num h2.section-sub-heading::before {
+    counter-increment: supsection;
+    content: counter(section) "." counter(subsection) "." counter(supsection) " ";
+}
+/************************************* counter-num css end *************************************/
+
+/************************************* scrollbar css end *************************************/
+/*====================================
+    scrollbar css
+====================================*/
+aside {
+    -webkit-scrollbar-width: thin;
+    scrollbar-width: thin;
+}
+aside::-webkit-scrollbar {
+    width: 2px;
+}
+aside::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+aside::-webkit-scrollbar-thumb {
+    background-color: var(--dominant-font-color);
+}
+/************************************* scrollbar css end *************************************/
+
+/************************************* animation css start *************************************/
+/*====================================
+    animation css
+====================================*/
+[data-animate] {
+    opacity: 0
+}
+[data-animate].animate__animated {
+    opacity: 1
+}
+/************************************* animation css end *************************************/

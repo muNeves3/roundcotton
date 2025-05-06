@@ -1,0 +1,48 @@
+/************************************* aside css *************************************/
+/*====================================
+    aside-nav css
+====================================*/
+aside {
+    left: -300px;
+    width: 300px;
+    max-width: 100%;
+    visibility: hidden;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out;
+}
+aside.active {
+    left: 0px;
+    visibility: visible;
+}
+@media (min-width: 992px) {
+    aside {
+        left: 0;
+        right: 0;
+        visibility: unset;
+        -webkit-transition: unset;
+        transition: unset;
+    }
+}
+aside nav#side-navbar nav.nav a.nav-link.active,
+aside nav#side-navbar nav.nav a.nav-link:focus {
+    color: var(--extra-font-color-light);
+    background-color: var(--secondary-font-color);
+}
+/************************************* aside end *************************************/
+
+/************************************* introduction css start *************************************/
+/*====================================
+    intro-feature css
+====================================*/
+.intro-feature-content ul.intro-feature-ul li.intro-feature-li span {
+    position: relative;
+}
+.intro-feature-content ul.intro-feature-ul li.intro-feature-li span::before {
+    content: "\f3c1";
+    font-family: remixicon!important;
+    color: var(--secondary-font-color);
+    font-size: 10px;
+    vertical-align: middle;
+    padding: 0px 10px 0px 0px;
+}
+/************************************* introduction css end *************************************/
